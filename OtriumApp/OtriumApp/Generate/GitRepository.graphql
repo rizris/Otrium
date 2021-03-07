@@ -1,0 +1,26 @@
+query GitRepository($login: String!, $items: Int!) {
+  user(login: $login) {
+      name
+      login
+      email
+    pinnedItems(first: $items) {
+        edges {
+          node {
+            ... on Repository {
+              name
+              description
+              primaryLanguage{
+                  name
+              }
+              forkCount
+              openGraphImageUrl
+              projects{
+                  totalCount
+              }
+            }
+          }
+        }
+    }
+  }
+}
+

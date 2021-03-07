@@ -1,0 +1,1011 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E5153EB25F2078D005BC929 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5153EA25F2078D005BC929 /* AppDelegate.swift */; };
+		7E5153ED25F2078D005BC929 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5153EC25F2078D005BC929 /* SceneDelegate.swift */; };
+		7E5153EF25F2078D005BC929 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5153EE25F2078D005BC929 /* ViewController.swift */; };
+		7E5153F225F2078D005BC929 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5153F025F2078D005BC929 /* Main.storyboard */; };
+		7E5153F425F2078F005BC929 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5153F325F2078F005BC929 /* Assets.xcassets */; };
+		7E5153F725F2078F005BC929 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5153F525F2078F005BC929 /* LaunchScreen.storyboard */; };
+		7E51540D25F2078F005BC929 /* OtriumAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E51540C25F2078F005BC929 /* OtriumAppUITests.swift */; };
+		7E51542325F20859005BC929 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E51542225F20859005BC929 /* HomeView.swift */; };
+		7E51543125F288BA005BC929 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 7E51543025F288BA005BC929 /* Apollo */; };
+		7E51543325F288BA005BC929 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 7E51543225F288BA005BC929 /* ApolloWebSocket */; };
+		7E51543925F288E1005BC929 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7E51543825F288E1005BC929 /* SnapKit */; };
+		7E5C41DC25F48E7E00097FFC /* PinnedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5C41DB25F48E7E00097FFC /* PinnedPresenter.swift */; };
+		7E5C41E125F48EED00097FFC /* PinnedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5C41E025F48EED00097FFC /* PinnedView.swift */; };
+		7E5C41E625F495D800097FFC /* PinnedView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5C41E525F495D800097FFC /* PinnedView+Ex.swift */; };
+		7E5D007225F3D24D0015E6FD /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 7E5D007125F3D24D0015E6FD /* NVActivityIndicatorView */; };
+		7E5D007825F3D2770015E6FD /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D007725F3D2770015E6FD /* IndicatorView.swift */; };
+		7E5D008025F3D2A70015E6FD /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5D007F25F3D2A70015E6FD /* Utility.swift */; };
+		7E6F714B25F4E74F00A87C63 /* RepositoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F714A25F4E74F00A87C63 /* RepositoryPresenter.swift */; };
+		7E6F715025F4E76900A87C63 /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F714F25F4E76900A87C63 /* RepositoryView.swift */; };
+		7E6F715525F4E77C00A87C63 /* RepositoryView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F715425F4E77C00A87C63 /* RepositoryView+Ex.swift */; };
+		7E6F715F25F4FC2D00A87C63 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F715E25F4FC2D00A87C63 /* RepositoryModel.swift */; };
+		7E6F716925F4FE6500A87C63 /* GitRepository.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 7E6F716825F4FE6500A87C63 /* GitRepository.graphql */; };
+		7E86FBCB25F31D0000EB1465 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FBCA25F31D0000EB1465 /* HomePresenter.swift */; };
+		7E86FBD425F322D300EB1465 /* HomeView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FBD325F322D300EB1465 /* HomeView+Ex.swift */; };
+		7E86FBE225F3242C00EB1465 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FBE125F3242C00EB1465 /* BaseView.swift */; };
+		7E86FBE825F3248C00EB1465 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FBE725F3248C00EB1465 /* MainCell.swift */; };
+		7E86FBF025F324E000EB1465 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FBEF25F324E000EB1465 /* BaseCell.swift */; };
+		7E86FBF525F3264D00EB1465 /* MainCell+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FBF425F3264D00EB1465 /* MainCell+Ex.swift */; };
+		7E86FBFB25F326BA00EB1465 /* SwiftHEXColors in Frameworks */ = {isa = PBXBuildFile; productRef = 7E86FBFA25F326BA00EB1465 /* SwiftHEXColors */; };
+		7E86FC0225F32D3E00EB1465 /* Label+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC0125F32D3E00EB1465 /* Label+Ex.swift */; };
+		7E86FC0725F32D6800EB1465 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC0625F32D6800EB1465 /* Constant.swift */; };
+		7E86FC0C25F33C6F00EB1465 /* PinnedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC0B25F33C6F00EB1465 /* PinnedCell.swift */; };
+		7E86FC1125F33C8400EB1465 /* PinnedCell+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC1025F33C8400EB1465 /* PinnedCell+Ex.swift */; };
+		7E86FC1A25F366B000EB1465 /* TopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC1925F366B000EB1465 /* TopCell.swift */; };
+		7E86FC1F25F366BD00EB1465 /* TopCell+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC1E25F366BD00EB1465 /* TopCell+Ex.swift */; };
+		7E86FC3C25F369BB00EB1465 /* TopCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC3B25F369BB00EB1465 /* TopCollectionCell.swift */; };
+		7E86FC4425F369CE00EB1465 /* TopCollectionCel+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC4325F369CE00EB1465 /* TopCollectionCel+Ex.swift */; };
+		7E86FC4925F3772900EB1465 /* StarredCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC4825F3772900EB1465 /* StarredCell.swift */; };
+		7E86FC4E25F3774000EB1465 /* StarredCell+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC4D25F3774000EB1465 /* StarredCell+Ex.swift */; };
+		7E86FC5325F377CA00EB1465 /* StarredCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC5225F377CA00EB1465 /* StarredCollectionCell.swift */; };
+		7E86FC5825F377D800EB1465 /* StarredCollectionCell+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC5725F377D800EB1465 /* StarredCollectionCell+Ex.swift */; };
+		7E86FC6225F37D2800EB1465 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7E86FC6125F37D2800EB1465 /* AlamofireImage */; };
+		7E86FC6725F387D400EB1465 /* PinnedCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC6625F387D400EB1465 /* PinnedCellHeader.swift */; };
+		7E86FC6C25F3887800EB1465 /* Button+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC6B25F3887800EB1465 /* Button+Ex.swift */; };
+		7E86FC7125F38BFE00EB1465 /* TopCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC7025F38BFE00EB1465 /* TopCellHeader.swift */; };
+		7E86FC7625F38C0D00EB1465 /* StarredCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC7525F38C0D00EB1465 /* StarredCellHeader.swift */; };
+		7E86FC7F25F3905100EB1465 /* HomeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC7E25F3905100EB1465 /* HomeViewTests.swift */; };
+		7E90559325F29AE100574071 /* UserProfile.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 7E90559225F29AE100574071 /* UserProfile.graphql */; };
+		7E9055A125F29E8500574071 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9055A025F29E8500574071 /* Network.swift */; };
+		7E9055AC25F2A25500574071 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9055AB25F2A25500574071 /* GithubAPI.swift */; };
+		7E9055BF25F2BC5100574071 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9055BE25F2BC5100574071 /* UserModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E5153FE25F2078F005BC929 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E5153DF25F2078D005BC929 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E5153E625F2078D005BC929;
+			remoteInfo = OtriumApp;
+		};
+		7E51540925F2078F005BC929 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E5153DF25F2078D005BC929 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E5153E625F2078D005BC929;
+			remoteInfo = OtriumApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7E5153E725F2078D005BC929 /* OtriumApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OtriumApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E5153EA25F2078D005BC929 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7E5153EC25F2078D005BC929 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7E5153EE25F2078D005BC929 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7E5153F125F2078D005BC929 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7E5153F325F2078F005BC929 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E5153F625F2078F005BC929 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7E5153F825F2078F005BC929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E5153FD25F2078F005BC929 /* OtriumAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtriumAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E51540325F2078F005BC929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E51540825F2078F005BC929 /* OtriumAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtriumAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E51540C25F2078F005BC929 /* OtriumAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtriumAppUITests.swift; sourceTree = "<group>"; };
+		7E51540E25F2078F005BC929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E51542225F20859005BC929 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7E5C41DB25F48E7E00097FFC /* PinnedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedPresenter.swift; sourceTree = "<group>"; };
+		7E5C41E025F48EED00097FFC /* PinnedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedView.swift; sourceTree = "<group>"; };
+		7E5C41E525F495D800097FFC /* PinnedView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PinnedView+Ex.swift"; sourceTree = "<group>"; };
+		7E5D007725F3D2770015E6FD /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		7E5D007F25F3D2A70015E6FD /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		7E6F714A25F4E74F00A87C63 /* RepositoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryPresenter.swift; sourceTree = "<group>"; };
+		7E6F714F25F4E76900A87C63 /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
+		7E6F715425F4E77C00A87C63 /* RepositoryView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryView+Ex.swift"; sourceTree = "<group>"; };
+		7E6F715E25F4FC2D00A87C63 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
+		7E6F716825F4FE6500A87C63 /* GitRepository.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GitRepository.graphql; sourceTree = "<group>"; };
+		7E86FBCA25F31D0000EB1465 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		7E86FBD325F322D300EB1465 /* HomeView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+Ex.swift"; sourceTree = "<group>"; };
+		7E86FBE125F3242C00EB1465 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		7E86FBE725F3248C00EB1465 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		7E86FBEF25F324E000EB1465 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		7E86FBF425F3264D00EB1465 /* MainCell+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainCell+Ex.swift"; sourceTree = "<group>"; };
+		7E86FC0125F32D3E00EB1465 /* Label+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label+Ex.swift"; sourceTree = "<group>"; };
+		7E86FC0625F32D6800EB1465 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		7E86FC0B25F33C6F00EB1465 /* PinnedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedCell.swift; sourceTree = "<group>"; };
+		7E86FC1025F33C8400EB1465 /* PinnedCell+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PinnedCell+Ex.swift"; sourceTree = "<group>"; };
+		7E86FC1925F366B000EB1465 /* TopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCell.swift; sourceTree = "<group>"; };
+		7E86FC1E25F366BD00EB1465 /* TopCell+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopCell+Ex.swift"; sourceTree = "<group>"; };
+		7E86FC3B25F369BB00EB1465 /* TopCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCollectionCell.swift; sourceTree = "<group>"; };
+		7E86FC4325F369CE00EB1465 /* TopCollectionCel+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopCollectionCel+Ex.swift"; sourceTree = "<group>"; };
+		7E86FC4825F3772900EB1465 /* StarredCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredCell.swift; sourceTree = "<group>"; };
+		7E86FC4D25F3774000EB1465 /* StarredCell+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StarredCell+Ex.swift"; sourceTree = "<group>"; };
+		7E86FC5225F377CA00EB1465 /* StarredCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredCollectionCell.swift; sourceTree = "<group>"; };
+		7E86FC5725F377D800EB1465 /* StarredCollectionCell+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StarredCollectionCell+Ex.swift"; sourceTree = "<group>"; };
+		7E86FC6625F387D400EB1465 /* PinnedCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedCellHeader.swift; sourceTree = "<group>"; };
+		7E86FC6B25F3887800EB1465 /* Button+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Ex.swift"; sourceTree = "<group>"; };
+		7E86FC7025F38BFE00EB1465 /* TopCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCellHeader.swift; sourceTree = "<group>"; };
+		7E86FC7525F38C0D00EB1465 /* StarredCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarredCellHeader.swift; sourceTree = "<group>"; };
+		7E86FC7E25F3905100EB1465 /* HomeViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTests.swift; sourceTree = "<group>"; };
+		7E90559125F299ED00574071 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		7E90559225F29AE100574071 /* UserProfile.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = UserProfile.graphql; sourceTree = "<group>"; };
+		7E9055A025F29E8500574071 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		7E9055AB25F2A25500574071 /* GithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		7E9055BE25F2BC5100574071 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E5153E425F2078D005BC929 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E51543925F288E1005BC929 /* SnapKit in Frameworks */,
+				7E51543125F288BA005BC929 /* Apollo in Frameworks */,
+				7E5D007225F3D24D0015E6FD /* NVActivityIndicatorView in Frameworks */,
+				7E86FC6225F37D2800EB1465 /* AlamofireImage in Frameworks */,
+				7E86FBFB25F326BA00EB1465 /* SwiftHEXColors in Frameworks */,
+				7E51543325F288BA005BC929 /* ApolloWebSocket in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E5153FA25F2078F005BC929 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E51540525F2078F005BC929 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7E5153DE25F2078D005BC929 = {
+			isa = PBXGroup;
+			children = (
+				7E5153E925F2078D005BC929 /* OtriumApp */,
+				7E51540025F2078F005BC929 /* OtriumAppTests */,
+				7E51540B25F2078F005BC929 /* OtriumAppUITests */,
+				7E5153E825F2078D005BC929 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7E5153E825F2078D005BC929 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7E5153E725F2078D005BC929 /* OtriumApp.app */,
+				7E5153FD25F2078F005BC929 /* OtriumAppTests.xctest */,
+				7E51540825F2078F005BC929 /* OtriumAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E5153E925F2078D005BC929 /* OtriumApp */ = {
+			isa = PBXGroup;
+			children = (
+				7E51545225F28DCC005BC929 /* Generate */,
+				7E51541E25F207F0005BC929 /* Main */,
+				7E51541D25F207A3005BC929 /* Classes */,
+			);
+			path = OtriumApp;
+			sourceTree = "<group>";
+		};
+		7E51540025F2078F005BC929 /* OtriumAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				7E51540325F2078F005BC929 /* Info.plist */,
+				7E86FC7E25F3905100EB1465 /* HomeViewTests.swift */,
+			);
+			path = OtriumAppTests;
+			sourceTree = "<group>";
+		};
+		7E51540B25F2078F005BC929 /* OtriumAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7E51540C25F2078F005BC929 /* OtriumAppUITests.swift */,
+				7E51540E25F2078F005BC929 /* Info.plist */,
+			);
+			path = OtriumAppUITests;
+			sourceTree = "<group>";
+		};
+		7E51541D25F207A3005BC929 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7E86FBFF25F32D1100EB1465 /* Helpers */,
+				7E51542125F20829005BC929 /* Model */,
+				7E51542025F2081E005BC929 /* Presenter */,
+				7E51541F25F20804005BC929 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7E51541E25F207F0005BC929 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7E5153EA25F2078D005BC929 /* AppDelegate.swift */,
+				7E5153EC25F2078D005BC929 /* SceneDelegate.swift */,
+				7E5153EE25F2078D005BC929 /* ViewController.swift */,
+				7E5153F025F2078D005BC929 /* Main.storyboard */,
+				7E5153F325F2078F005BC929 /* Assets.xcassets */,
+				7E5153F525F2078F005BC929 /* LaunchScreen.storyboard */,
+				7E5153F825F2078F005BC929 /* Info.plist */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		7E51541F25F20804005BC929 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7E6F715A25F4E7A600A87C63 /* PinnedView */,
+				7E6F715925F4E78500A87C63 /* RepositoryView */,
+				7E86FBE625F3243200EB1465 /* Main */,
+				7E86FBD225F322B500EB1465 /* HomeView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7E51542025F2081E005BC929 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7E86FBCA25F31D0000EB1465 /* HomePresenter.swift */,
+				7E5C41DB25F48E7E00097FFC /* PinnedPresenter.swift */,
+				7E6F714A25F4E74F00A87C63 /* RepositoryPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7E51542125F20829005BC929 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E9055BE25F2BC5100574071 /* UserModel.swift */,
+				7E6F715E25F4FC2D00A87C63 /* RepositoryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E51545225F28DCC005BC929 /* Generate */ = {
+			isa = PBXGroup;
+			children = (
+				7E90559B25F29B6E00574071 /* Scripts */,
+				7E90559125F299ED00574071 /* schema.json */,
+				7E90559225F29AE100574071 /* UserProfile.graphql */,
+				7E9055A025F29E8500574071 /* Network.swift */,
+				7E6F716825F4FE6500A87C63 /* GitRepository.graphql */,
+			);
+			path = Generate;
+			sourceTree = "<group>";
+		};
+		7E5D007625F3D2660015E6FD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7E5D007725F3D2770015E6FD /* IndicatorView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7E6F715925F4E78500A87C63 /* RepositoryView */ = {
+			isa = PBXGroup;
+			children = (
+				7E6F714F25F4E76900A87C63 /* RepositoryView.swift */,
+				7E6F715425F4E77C00A87C63 /* RepositoryView+Ex.swift */,
+			);
+			path = RepositoryView;
+			sourceTree = "<group>";
+		};
+		7E6F715A25F4E7A600A87C63 /* PinnedView */ = {
+			isa = PBXGroup;
+			children = (
+				7E5C41E025F48EED00097FFC /* PinnedView.swift */,
+				7E5C41E525F495D800097FFC /* PinnedView+Ex.swift */,
+			);
+			path = PinnedView;
+			sourceTree = "<group>";
+		};
+		7E86FBD225F322B500EB1465 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				7E51542225F20859005BC929 /* HomeView.swift */,
+				7E86FBD325F322D300EB1465 /* HomeView+Ex.swift */,
+				7E86FC7A25F38F0E00EB1465 /* CellHeader */,
+				7E86FC5C25F37C3700EB1465 /* TableCells */,
+				7E86FC3A25F3698D00EB1465 /* CollectionCells */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		7E86FBE625F3243200EB1465 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7E86FBE125F3242C00EB1465 /* BaseView.swift */,
+				7E86FBEF25F324E000EB1465 /* BaseCell.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7E86FBFF25F32D1100EB1465 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7E5D007625F3D2660015E6FD /* UI */,
+				7E86FC0025F32D1A00EB1465 /* Extensions */,
+				7E86FC0625F32D6800EB1465 /* Constant.swift */,
+				7E5D007F25F3D2A70015E6FD /* Utility.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7E86FC0025F32D1A00EB1465 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7E86FC0125F32D3E00EB1465 /* Label+Ex.swift */,
+				7E86FC6B25F3887800EB1465 /* Button+Ex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7E86FC3A25F3698D00EB1465 /* CollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+				7E86FC3B25F369BB00EB1465 /* TopCollectionCell.swift */,
+				7E86FC4325F369CE00EB1465 /* TopCollectionCel+Ex.swift */,
+				7E86FC5225F377CA00EB1465 /* StarredCollectionCell.swift */,
+				7E86FC5725F377D800EB1465 /* StarredCollectionCell+Ex.swift */,
+			);
+			path = CollectionCells;
+			sourceTree = "<group>";
+		};
+		7E86FC5C25F37C3700EB1465 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				7E86FBE725F3248C00EB1465 /* MainCell.swift */,
+				7E86FBF425F3264D00EB1465 /* MainCell+Ex.swift */,
+				7E86FC0B25F33C6F00EB1465 /* PinnedCell.swift */,
+				7E86FC1025F33C8400EB1465 /* PinnedCell+Ex.swift */,
+				7E86FC1925F366B000EB1465 /* TopCell.swift */,
+				7E86FC1E25F366BD00EB1465 /* TopCell+Ex.swift */,
+				7E86FC4825F3772900EB1465 /* StarredCell.swift */,
+				7E86FC4D25F3774000EB1465 /* StarredCell+Ex.swift */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		7E86FC7A25F38F0E00EB1465 /* CellHeader */ = {
+			isa = PBXGroup;
+			children = (
+				7E86FC6625F387D400EB1465 /* PinnedCellHeader.swift */,
+				7E86FC7025F38BFE00EB1465 /* TopCellHeader.swift */,
+				7E86FC7525F38C0D00EB1465 /* StarredCellHeader.swift */,
+			);
+			path = CellHeader;
+			sourceTree = "<group>";
+		};
+		7E90559B25F29B6E00574071 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				7E9055AB25F2A25500574071 /* GithubAPI.swift */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7E5153E625F2078D005BC929 /* OtriumApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E51541125F2078F005BC929 /* Build configuration list for PBXNativeTarget "OtriumApp" */;
+			buildPhases = (
+				7E51543E25F28A89005BC929 /* Apollo CLI */,
+				7E5153E325F2078D005BC929 /* Sources */,
+				7E5153E425F2078D005BC929 /* Frameworks */,
+				7E5153E525F2078D005BC929 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OtriumApp;
+			packageProductDependencies = (
+				7E51543025F288BA005BC929 /* Apollo */,
+				7E51543225F288BA005BC929 /* ApolloWebSocket */,
+				7E51543825F288E1005BC929 /* SnapKit */,
+				7E86FBFA25F326BA00EB1465 /* SwiftHEXColors */,
+				7E86FC6125F37D2800EB1465 /* AlamofireImage */,
+				7E5D007125F3D24D0015E6FD /* NVActivityIndicatorView */,
+			);
+			productName = OtriumApp;
+			productReference = 7E5153E725F2078D005BC929 /* OtriumApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7E5153FC25F2078F005BC929 /* OtriumAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E51541425F2078F005BC929 /* Build configuration list for PBXNativeTarget "OtriumAppTests" */;
+			buildPhases = (
+				7E5153F925F2078F005BC929 /* Sources */,
+				7E5153FA25F2078F005BC929 /* Frameworks */,
+				7E5153FB25F2078F005BC929 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E5153FF25F2078F005BC929 /* PBXTargetDependency */,
+			);
+			name = OtriumAppTests;
+			productName = OtriumAppTests;
+			productReference = 7E5153FD25F2078F005BC929 /* OtriumAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7E51540725F2078F005BC929 /* OtriumAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E51541725F2078F005BC929 /* Build configuration list for PBXNativeTarget "OtriumAppUITests" */;
+			buildPhases = (
+				7E51540425F2078F005BC929 /* Sources */,
+				7E51540525F2078F005BC929 /* Frameworks */,
+				7E51540625F2078F005BC929 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E51540A25F2078F005BC929 /* PBXTargetDependency */,
+			);
+			name = OtriumAppUITests;
+			productName = OtriumAppUITests;
+			productReference = 7E51540825F2078F005BC929 /* OtriumAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7E5153DF25F2078D005BC929 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					7E5153E625F2078D005BC929 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					7E5153FC25F2078F005BC929 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 7E5153E625F2078D005BC929;
+					};
+					7E51540725F2078F005BC929 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 7E5153E625F2078D005BC929;
+					};
+				};
+			};
+			buildConfigurationList = 7E5153E225F2078D005BC929 /* Build configuration list for PBXProject "OtriumApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7E5153DE25F2078D005BC929;
+			packageReferences = (
+				7E51542F25F288BA005BC929 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				7E51543725F288E1005BC929 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				7E86FBF925F326BA00EB1465 /* XCRemoteSwiftPackageReference "SwiftHEXColors" */,
+				7E86FC6025F37D2800EB1465 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				7E5D007025F3D24C0015E6FD /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+			);
+			productRefGroup = 7E5153E825F2078D005BC929 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7E5153E625F2078D005BC929 /* OtriumApp */,
+				7E5153FC25F2078F005BC929 /* OtriumAppTests */,
+				7E51540725F2078F005BC929 /* OtriumAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E5153E525F2078D005BC929 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E90559325F29AE100574071 /* UserProfile.graphql in Resources */,
+				7E5153F725F2078F005BC929 /* LaunchScreen.storyboard in Resources */,
+				7E6F716925F4FE6500A87C63 /* GitRepository.graphql in Resources */,
+				7E5153F425F2078F005BC929 /* Assets.xcassets in Resources */,
+				7E5153F225F2078D005BC929 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E5153FB25F2078F005BC929 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E51540625F2078F005BC929 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E51543E25F28A89005BC929 /* Apollo CLI */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Apollo CLI";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}/Generate\"\n\n#\"${SCRIPT_PATH}\"/run-bundled-codegen.sh schema:download --endpoint=\"https://api.github.com/graphql\" --header=\"Authorization: Bearer 3b062f9d92bfde30acffebf801862d8ee9797946\"\n\n\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" Scripts/GithubAPI.swift\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7E5153E325F2078D005BC929 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E9055A125F29E8500574071 /* Network.swift in Sources */,
+				7E9055BF25F2BC5100574071 /* UserModel.swift in Sources */,
+				7E86FC1125F33C8400EB1465 /* PinnedCell+Ex.swift in Sources */,
+				7E86FC0725F32D6800EB1465 /* Constant.swift in Sources */,
+				7E5D007825F3D2770015E6FD /* IndicatorView.swift in Sources */,
+				7E9055AC25F2A25500574071 /* GithubAPI.swift in Sources */,
+				7E5C41DC25F48E7E00097FFC /* PinnedPresenter.swift in Sources */,
+				7E86FC0225F32D3E00EB1465 /* Label+Ex.swift in Sources */,
+				7E86FBF525F3264D00EB1465 /* MainCell+Ex.swift in Sources */,
+				7E6F715525F4E77C00A87C63 /* RepositoryView+Ex.swift in Sources */,
+				7E86FC6C25F3887800EB1465 /* Button+Ex.swift in Sources */,
+				7E86FC4425F369CE00EB1465 /* TopCollectionCel+Ex.swift in Sources */,
+				7E5C41E625F495D800097FFC /* PinnedView+Ex.swift in Sources */,
+				7E5153EF25F2078D005BC929 /* ViewController.swift in Sources */,
+				7E86FC4925F3772900EB1465 /* StarredCell.swift in Sources */,
+				7E6F715025F4E76900A87C63 /* RepositoryView.swift in Sources */,
+				7E86FC7625F38C0D00EB1465 /* StarredCellHeader.swift in Sources */,
+				7E6F714B25F4E74F00A87C63 /* RepositoryPresenter.swift in Sources */,
+				7E86FBF025F324E000EB1465 /* BaseCell.swift in Sources */,
+				7E51542325F20859005BC929 /* HomeView.swift in Sources */,
+				7E86FC0C25F33C6F00EB1465 /* PinnedCell.swift in Sources */,
+				7E6F715F25F4FC2D00A87C63 /* RepositoryModel.swift in Sources */,
+				7E86FC1A25F366B000EB1465 /* TopCell.swift in Sources */,
+				7E5C41E125F48EED00097FFC /* PinnedView.swift in Sources */,
+				7E86FBE825F3248C00EB1465 /* MainCell.swift in Sources */,
+				7E86FC5825F377D800EB1465 /* StarredCollectionCell+Ex.swift in Sources */,
+				7E86FC4E25F3774000EB1465 /* StarredCell+Ex.swift in Sources */,
+				7E86FC7125F38BFE00EB1465 /* TopCellHeader.swift in Sources */,
+				7E86FC3C25F369BB00EB1465 /* TopCollectionCell.swift in Sources */,
+				7E5153EB25F2078D005BC929 /* AppDelegate.swift in Sources */,
+				7E5153ED25F2078D005BC929 /* SceneDelegate.swift in Sources */,
+				7E86FBE225F3242C00EB1465 /* BaseView.swift in Sources */,
+				7E86FC1F25F366BD00EB1465 /* TopCell+Ex.swift in Sources */,
+				7E5D008025F3D2A70015E6FD /* Utility.swift in Sources */,
+				7E86FC6725F387D400EB1465 /* PinnedCellHeader.swift in Sources */,
+				7E86FBCB25F31D0000EB1465 /* HomePresenter.swift in Sources */,
+				7E86FBD425F322D300EB1465 /* HomeView+Ex.swift in Sources */,
+				7E86FC5325F377CA00EB1465 /* StarredCollectionCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E5153F925F2078F005BC929 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E86FC7F25F3905100EB1465 /* HomeViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E51540425F2078F005BC929 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E51540D25F2078F005BC929 /* OtriumAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E5153FF25F2078F005BC929 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E5153E625F2078D005BC929 /* OtriumApp */;
+			targetProxy = 7E5153FE25F2078F005BC929 /* PBXContainerItemProxy */;
+		};
+		7E51540A25F2078F005BC929 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E5153E625F2078D005BC929 /* OtriumApp */;
+			targetProxy = 7E51540925F2078F005BC929 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7E5153F025F2078D005BC929 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E5153F125F2078D005BC929 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7E5153F525F2078F005BC929 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E5153F625F2078F005BC929 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7E51540F25F2078F005BC929 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7E51541025F2078F005BC929 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7E51541225F2078F005BC929 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5T835L589;
+				INFOPLIST_FILE = OtriumApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iihsolution.OtriumApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7E51541325F2078F005BC929 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5T835L589;
+				INFOPLIST_FILE = OtriumApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iihsolution.OtriumApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		7E51541525F2078F005BC929 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5T835L589;
+				INFOPLIST_FILE = OtriumAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iihsolution.OtriumAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OtriumApp.app/OtriumApp";
+			};
+			name = Debug;
+		};
+		7E51541625F2078F005BC929 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5T835L589;
+				INFOPLIST_FILE = OtriumAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iihsolution.OtriumAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OtriumApp.app/OtriumApp";
+			};
+			name = Release;
+		};
+		7E51541825F2078F005BC929 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5T835L589;
+				INFOPLIST_FILE = OtriumAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iihsolution.OtriumAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OtriumApp;
+			};
+			name = Debug;
+		};
+		7E51541925F2078F005BC929 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5T835L589;
+				INFOPLIST_FILE = OtriumAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iihsolution.OtriumAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OtriumApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7E5153E225F2078D005BC929 /* Build configuration list for PBXProject "OtriumApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E51540F25F2078F005BC929 /* Debug */,
+				7E51541025F2078F005BC929 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E51541125F2078F005BC929 /* Build configuration list for PBXNativeTarget "OtriumApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E51541225F2078F005BC929 /* Debug */,
+				7E51541325F2078F005BC929 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E51541425F2078F005BC929 /* Build configuration list for PBXNativeTarget "OtriumAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E51541525F2078F005BC929 /* Debug */,
+				7E51541625F2078F005BC929 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E51541725F2078F005BC929 /* Build configuration list for PBXNativeTarget "OtriumAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E51541825F2078F005BC929 /* Debug */,
+				7E51541925F2078F005BC929 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7E51542F25F288BA005BC929 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.42.0;
+			};
+		};
+		7E51543725F288E1005BC929 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		7E5D007025F3D24C0015E6FD /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+		7E86FBF925F326BA00EB1465 /* XCRemoteSwiftPackageReference "SwiftHEXColors" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/thii/SwiftHEXColors.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
+		7E86FC6025F37D2800EB1465 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7E51543025F288BA005BC929 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E51542F25F288BA005BC929 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		7E51543225F288BA005BC929 /* ApolloWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E51542F25F288BA005BC929 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+		7E51543825F288E1005BC929 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E51543725F288E1005BC929 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		7E5D007125F3D24D0015E6FD /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E5D007025F3D24C0015E6FD /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		7E86FBFA25F326BA00EB1465 /* SwiftHEXColors */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E86FBF925F326BA00EB1465 /* XCRemoteSwiftPackageReference "SwiftHEXColors" */;
+			productName = SwiftHEXColors;
+		};
+		7E86FC6125F37D2800EB1465 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E86FC6025F37D2800EB1465 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 7E5153DF25F2078D005BC929 /* Project object */;
+}
