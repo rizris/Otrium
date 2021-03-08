@@ -30,7 +30,8 @@ class Network {
         let provider = LegacyInterceptorProvider(client: client, shouldInvalidateClientOnDeinit: true, store: store)
         
         let url = URL(string: Constant.App.BASE_URL)!
-        let header = ["Authorization": "Bearer 3b062f9d92bfde30acffebf801862d8ee9797946"]
+        //let header = ["Authorization": "Bearer 3b062f9d92bfde30acffebf801862d8ee9797946"]
+        let header = ["Authorization": "Bearer  59a2f8ab066acda50c6f3a8b2e3ea60441f748c6"]
         let requestChainTransport = RequestChainNetworkTransport(interceptorProvider: provider, endpointURL: url, additionalHeaders: header)
   
         return ApolloClient(networkTransport: requestChainTransport, store: store)
