@@ -13,7 +13,7 @@ struct Constant {
         static let APP_NAME                     = "OtriumApp"
         static let BASE_URL                     = "https://api.github.com/graphql"
         static let LOGO                         = "logo"
-        static let TOKEN                        = "02bb09b762252ffc2fe2120914d88ae2f0d5bdfa" // Please change it if is expired
+        static let TOKEN                        = "e2a8b7e8f3f23e7f1cd972cfb1fc72069bfd8733" // Please change it if is expired
         
     }
     
