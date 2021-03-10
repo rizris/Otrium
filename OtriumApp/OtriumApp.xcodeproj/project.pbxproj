@@ -15,8 +15,6 @@
 		7E5153F725F2078F005BC929 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5153F525F2078F005BC929 /* LaunchScreen.storyboard */; };
 		7E51540D25F2078F005BC929 /* OtriumAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E51540C25F2078F005BC929 /* OtriumAppUITests.swift */; };
 		7E51542325F20859005BC929 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E51542225F20859005BC929 /* HomeView.swift */; };
-		7E51543125F288BA005BC929 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 7E51543025F288BA005BC929 /* Apollo */; };
-		7E51543325F288BA005BC929 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 7E51543225F288BA005BC929 /* ApolloWebSocket */; };
 		7E51543925F288E1005BC929 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7E51543825F288E1005BC929 /* SnapKit */; };
 		7E5C41DC25F48E7E00097FFC /* PinnedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5C41DB25F48E7E00097FFC /* PinnedPresenter.swift */; };
 		7E5C41E125F48EED00097FFC /* PinnedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5C41E025F48EED00097FFC /* PinnedView.swift */; };
@@ -29,12 +27,17 @@
 		7E6F715525F4E77C00A87C63 /* RepositoryView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F715425F4E77C00A87C63 /* RepositoryView+Ex.swift */; };
 		7E6F715F25F4FC2D00A87C63 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6F715E25F4FC2D00A87C63 /* RepositoryModel.swift */; };
 		7E6F716925F4FE6500A87C63 /* GitRepository.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 7E6F716825F4FE6500A87C63 /* GitRepository.graphql */; };
+		7E79B2AD25F68432007A65A2 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 7E79B2AC25F68432007A65A2 /* Apollo */; };
+		7E79B2AF25F68432007A65A2 /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 7E79B2AE25F68432007A65A2 /* ApolloSQLite */; };
+		7E81619525F7E014003A4327 /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E81619425F7E014003A4327 /* HomePresenterTests.swift */; };
+		7E859BDE25F8DE1300768843 /* Label-Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E859BDD25F8DE1300768843 /* Label-Main.swift */; };
+		7E859BF825F8E6F700768843 /* Image-Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E859BF725F8E6F700768843 /* Image-Main.swift */; };
+		7E859BFD25F8EB7D00768843 /* View-Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E859BFC25F8EB7D00768843 /* View-Main.swift */; };
+		7E859C0B25F8F0B100768843 /* Button-Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E859C0A25F8F0B100768843 /* Button-Main.swift */; };
 		7E86FBCB25F31D0000EB1465 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FBCA25F31D0000EB1465 /* HomePresenter.swift */; };
 		7E86FBD425F322D300EB1465 /* HomeView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FBD325F322D300EB1465 /* HomeView+Ex.swift */; };
 		7E86FBE225F3242C00EB1465 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FBE125F3242C00EB1465 /* BaseView.swift */; };
-		7E86FBE825F3248C00EB1465 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FBE725F3248C00EB1465 /* MainCell.swift */; };
 		7E86FBF025F324E000EB1465 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FBEF25F324E000EB1465 /* BaseCell.swift */; };
-		7E86FBF525F3264D00EB1465 /* MainCell+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FBF425F3264D00EB1465 /* MainCell+Ex.swift */; };
 		7E86FBFB25F326BA00EB1465 /* SwiftHEXColors in Frameworks */ = {isa = PBXBuildFile; productRef = 7E86FBFA25F326BA00EB1465 /* SwiftHEXColors */; };
 		7E86FC0225F32D3E00EB1465 /* Label+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC0125F32D3E00EB1465 /* Label+Ex.swift */; };
 		7E86FC0725F32D6800EB1465 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E86FC0625F32D6800EB1465 /* Constant.swift */; };
@@ -102,12 +105,15 @@
 		7E6F715425F4E77C00A87C63 /* RepositoryView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryView+Ex.swift"; sourceTree = "<group>"; };
 		7E6F715E25F4FC2D00A87C63 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
 		7E6F716825F4FE6500A87C63 /* GitRepository.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GitRepository.graphql; sourceTree = "<group>"; };
+		7E81619425F7E014003A4327 /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
+		7E859BDD25F8DE1300768843 /* Label-Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label-Main.swift"; sourceTree = "<group>"; };
+		7E859BF725F8E6F700768843 /* Image-Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image-Main.swift"; sourceTree = "<group>"; };
+		7E859BFC25F8EB7D00768843 /* View-Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-Main.swift"; sourceTree = "<group>"; };
+		7E859C0A25F8F0B100768843 /* Button-Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button-Main.swift"; sourceTree = "<group>"; };
 		7E86FBCA25F31D0000EB1465 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		7E86FBD325F322D300EB1465 /* HomeView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+Ex.swift"; sourceTree = "<group>"; };
 		7E86FBE125F3242C00EB1465 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		7E86FBE725F3248C00EB1465 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		7E86FBEF25F324E000EB1465 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
-		7E86FBF425F3264D00EB1465 /* MainCell+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainCell+Ex.swift"; sourceTree = "<group>"; };
 		7E86FC0125F32D3E00EB1465 /* Label+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label+Ex.swift"; sourceTree = "<group>"; };
 		7E86FC0625F32D6800EB1465 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		7E86FC0B25F33C6F00EB1465 /* PinnedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedCell.swift; sourceTree = "<group>"; };
@@ -137,12 +143,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E79B2AD25F68432007A65A2 /* Apollo in Frameworks */,
 				7E51543925F288E1005BC929 /* SnapKit in Frameworks */,
-				7E51543125F288BA005BC929 /* Apollo in Frameworks */,
 				7E5D007225F3D24D0015E6FD /* NVActivityIndicatorView in Frameworks */,
 				7E86FC6225F37D2800EB1465 /* AlamofireImage in Frameworks */,
 				7E86FBFB25F326BA00EB1465 /* SwiftHEXColors in Frameworks */,
-				7E51543325F288BA005BC929 /* ApolloWebSocket in Frameworks */,
+				7E79B2AF25F68432007A65A2 /* ApolloSQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +204,7 @@
 			children = (
 				7E51540325F2078F005BC929 /* Info.plist */,
 				7E86FC7E25F3905100EB1465 /* HomeViewTests.swift */,
+				7E81619425F7E014003A4327 /* HomePresenterTests.swift */,
 			);
 			path = OtriumAppTests;
 			sourceTree = "<group>";
@@ -341,6 +348,10 @@
 			children = (
 				7E86FC0125F32D3E00EB1465 /* Label+Ex.swift */,
 				7E86FC6B25F3887800EB1465 /* Button+Ex.swift */,
+				7E859BDD25F8DE1300768843 /* Label-Main.swift */,
+				7E859BF725F8E6F700768843 /* Image-Main.swift */,
+				7E859BFC25F8EB7D00768843 /* View-Main.swift */,
+				7E859C0A25F8F0B100768843 /* Button-Main.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -359,8 +370,6 @@
 		7E86FC5C25F37C3700EB1465 /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
-				7E86FBE725F3248C00EB1465 /* MainCell.swift */,
-				7E86FBF425F3264D00EB1465 /* MainCell+Ex.swift */,
 				7E86FC0B25F33C6F00EB1465 /* PinnedCell.swift */,
 				7E86FC1025F33C8400EB1465 /* PinnedCell+Ex.swift */,
 				7E86FC1925F366B000EB1465 /* TopCell.swift */,
@@ -407,12 +416,12 @@
 			);
 			name = OtriumApp;
 			packageProductDependencies = (
-				7E51543025F288BA005BC929 /* Apollo */,
-				7E51543225F288BA005BC929 /* ApolloWebSocket */,
 				7E51543825F288E1005BC929 /* SnapKit */,
 				7E86FBFA25F326BA00EB1465 /* SwiftHEXColors */,
 				7E86FC6125F37D2800EB1465 /* AlamofireImage */,
 				7E5D007125F3D24D0015E6FD /* NVActivityIndicatorView */,
+				7E79B2AC25F68432007A65A2 /* Apollo */,
+				7E79B2AE25F68432007A65A2 /* ApolloSQLite */,
 			);
 			productName = OtriumApp;
 			productReference = 7E5153E725F2078D005BC929 /* OtriumApp.app */;
@@ -486,11 +495,11 @@
 			);
 			mainGroup = 7E5153DE25F2078D005BC929;
 			packageReferences = (
-				7E51542F25F288BA005BC929 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 				7E51543725F288E1005BC929 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				7E86FBF925F326BA00EB1465 /* XCRemoteSwiftPackageReference "SwiftHEXColors" */,
 				7E86FC6025F37D2800EB1465 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 				7E5D007025F3D24C0015E6FD /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				7E79B2AB25F68432007A65A2 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = 7E5153E825F2078D005BC929 /* Products */;
 			projectDirPath = "";
@@ -558,6 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E859BF825F8E6F700768843 /* Image-Main.swift in Sources */,
 				7E9055A125F29E8500574071 /* Network.swift in Sources */,
 				7E9055BF25F2BC5100574071 /* UserModel.swift in Sources */,
 				7E86FC1125F33C8400EB1465 /* PinnedCell+Ex.swift in Sources */,
@@ -566,7 +576,6 @@
 				7E9055AC25F2A25500574071 /* GithubAPI.swift in Sources */,
 				7E5C41DC25F48E7E00097FFC /* PinnedPresenter.swift in Sources */,
 				7E86FC0225F32D3E00EB1465 /* Label+Ex.swift in Sources */,
-				7E86FBF525F3264D00EB1465 /* MainCell+Ex.swift in Sources */,
 				7E6F715525F4E77C00A87C63 /* RepositoryView+Ex.swift in Sources */,
 				7E86FC6C25F3887800EB1465 /* Button+Ex.swift in Sources */,
 				7E86FC4425F369CE00EB1465 /* TopCollectionCel+Ex.swift in Sources */,
@@ -575,14 +584,16 @@
 				7E86FC4925F3772900EB1465 /* StarredCell.swift in Sources */,
 				7E6F715025F4E76900A87C63 /* RepositoryView.swift in Sources */,
 				7E86FC7625F38C0D00EB1465 /* StarredCellHeader.swift in Sources */,
+				7E859BFD25F8EB7D00768843 /* View-Main.swift in Sources */,
 				7E6F714B25F4E74F00A87C63 /* RepositoryPresenter.swift in Sources */,
 				7E86FBF025F324E000EB1465 /* BaseCell.swift in Sources */,
 				7E51542325F20859005BC929 /* HomeView.swift in Sources */,
 				7E86FC0C25F33C6F00EB1465 /* PinnedCell.swift in Sources */,
+				7E859BDE25F8DE1300768843 /* Label-Main.swift in Sources */,
 				7E6F715F25F4FC2D00A87C63 /* RepositoryModel.swift in Sources */,
 				7E86FC1A25F366B000EB1465 /* TopCell.swift in Sources */,
 				7E5C41E125F48EED00097FFC /* PinnedView.swift in Sources */,
-				7E86FBE825F3248C00EB1465 /* MainCell.swift in Sources */,
+				7E859C0B25F8F0B100768843 /* Button-Main.swift in Sources */,
 				7E86FC5825F377D800EB1465 /* StarredCollectionCell+Ex.swift in Sources */,
 				7E86FC4E25F3774000EB1465 /* StarredCell+Ex.swift in Sources */,
 				7E86FC7125F38BFE00EB1465 /* TopCellHeader.swift in Sources */,
@@ -604,6 +615,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E86FC7F25F3905100EB1465 /* HomeViewTests.swift in Sources */,
+				7E81619525F7E014003A4327 /* HomePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,7 +786,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5T835L589;
 				INFOPLIST_FILE = OtriumApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -794,7 +806,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5T835L589;
 				INFOPLIST_FILE = OtriumApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -932,14 +944,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7E51542F25F288BA005BC929 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 0.42.0;
-			};
-		};
 		7E51543725F288E1005BC929 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -954,6 +958,14 @@
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 5.1.1;
+			};
+		};
+		7E79B2AB25F68432007A65A2 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.39.0;
 			};
 		};
 		7E86FBF925F326BA00EB1465 /* XCRemoteSwiftPackageReference "SwiftHEXColors" */ = {
@@ -975,16 +987,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7E51543025F288BA005BC929 /* Apollo */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7E51542F25F288BA005BC929 /* XCRemoteSwiftPackageReference "apollo-ios" */;
-			productName = Apollo;
-		};
-		7E51543225F288BA005BC929 /* ApolloWebSocket */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7E51542F25F288BA005BC929 /* XCRemoteSwiftPackageReference "apollo-ios" */;
-			productName = ApolloWebSocket;
-		};
 		7E51543825F288E1005BC929 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7E51543725F288E1005BC929 /* XCRemoteSwiftPackageReference "SnapKit" */;
@@ -994,6 +996,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7E5D007025F3D24C0015E6FD /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
 			productName = NVActivityIndicatorView;
+		};
+		7E79B2AC25F68432007A65A2 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E79B2AB25F68432007A65A2 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		7E79B2AE25F68432007A65A2 /* ApolloSQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E79B2AB25F68432007A65A2 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloSQLite;
 		};
 		7E86FBFA25F326BA00EB1465 /* SwiftHEXColors */ = {
 			isa = XCSwiftPackageProductDependency;

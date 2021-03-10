@@ -35,7 +35,7 @@ extension UIButton {
         self.titleLabel?.font = UIFont(name: Constant.Strings.APP_FONT_NAME_BOLD, size: 20)
         self.setTitleColor(UIColor(hexString: color), for: .normal)
     }
-    func setupNormalFontAndColor (_ color : String = Constant.Colors.APP_WHITE_BACKGROUND)  {
+    func setupNormalFontAndColor (_ color : String = Constant.Colors.PRIMARY_WHITE)  {
         self.titleLabel?.font = UIFont(name: Constant.Strings.APP_FONT_NAME, size: 16)
         self.setTitleColor(UIColor(hexString: color), for: .normal)
     }

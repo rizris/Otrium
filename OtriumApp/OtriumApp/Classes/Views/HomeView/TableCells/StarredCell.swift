@@ -35,7 +35,6 @@ extension StarredCell {
         return userModel?.starredRepositories?.nodes?.count ?? 0
     }
     
-    // make a cell for each cell index path
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: StarredCollectionCell.identifier, for: indexPath) as! StarredCollectionCell
         
@@ -47,27 +46,13 @@ extension StarredCell {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //selectedPackageClosure?(true, packageArray[indexPath.row].pkg_id)
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var cellSize: CGSize
         cellSize = CGSize(width: 300, height: 200)
         return cellSize
     }
-    
-    /*func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize()
-        
-        //var cellSize: CGSize
-        //cellSize = CGSize(width: 200, height: 100)
-        //return cellSize
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        return sectionInset
-    }*/
+
 }
 

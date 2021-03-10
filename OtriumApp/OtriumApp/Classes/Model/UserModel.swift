@@ -8,8 +8,6 @@
 import Foundation
 
 struct UserModel : Decodable {
-    //var users: UserProfileQuery.Data.User
-    
     let name : String
     let login : String
     let email: String
@@ -21,9 +19,11 @@ struct UserModel : Decodable {
     let topRepositories : TopRepo?
     let starredRepositories: StarredRepo?
 }
+
 struct Followers: Decodable {
     let totalCount: Int?
 }
+
 struct Following: Decodable {
     let totalCount: Int?
 }
@@ -31,9 +31,11 @@ struct Following: Decodable {
 struct Pinned: Decodable  {
     let edges: [Edges]
 }
+
 struct Edges: Decodable {
     let node: PinndedModel
 }
+
 struct PinndedModel: Decodable {
     let name : String?
     let description: String
@@ -41,12 +43,15 @@ struct PinndedModel: Decodable {
     let openGraphImageUrl: String
     let primaryLanguage: PinnedLanguage?
 }
+
 struct PinnedLanguage: Decodable {
     let name : String
 }
+
 struct TopRepo: Decodable {
     let nodes: [TopRepository]?
 }
+
 struct TopRepository: Decodable {
     let name : String?
     let description: String
@@ -54,6 +59,7 @@ struct TopRepository: Decodable {
     let openGraphImageUrl: String
     let primaryLanguage: TopLanguage?
 }
+
 struct TopLanguage: Decodable {
     let name : String
 }
@@ -62,6 +68,7 @@ struct TopLanguage: Decodable {
 struct StarredRepo: Decodable {
     let nodes: [StarredRepository]?
 }
+
 struct StarredRepository: Decodable {
     let name : String?
     let description: String
@@ -69,6 +76,7 @@ struct StarredRepository: Decodable {
     let openGraphImageUrl: String
     let primaryLanguage: StarredLanguage?
 }
+
 struct StarredLanguage: Decodable {
     let name : String
 }

@@ -33,6 +33,8 @@ class PinnedPresenter: PinnedViewPresenter {
     
     var repositoryModel : MainModel?
     
+    
+    
     required init(view: ItemsPinnedView) {
         self.view = view
     }
@@ -42,7 +44,8 @@ class PinnedPresenter: PinnedViewPresenter {
      ================================================== */
     func loadRepositories(_ username: String) {
         showIndicator(true)
-        Network.shared.apollo.fetch(query:GitRepositoryQuery(login: username, items: 20)) { result in
+        Network.shared.apollo.fetch(query:GitRepositoryQuery(login: username, items: 20), cachePolicy: .returnCacheDataElseFetch) { result in
+        //Network.shared.apollo.fetch(query:GitRepositoryQuery(login: username, items: 20)) { result in
             self.showIndicator(false)
             switch result {
                 case .success(let graphQLResult):

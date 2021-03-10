@@ -1,5 +1,6 @@
-query UserProfile {
-  user(login: "bertrandmartel") {
+query UserProfile($login: String!) {
+  user(login: $login) {
+  #user(login: "bertrandmartel") {
       name
       login
       avatarUrl

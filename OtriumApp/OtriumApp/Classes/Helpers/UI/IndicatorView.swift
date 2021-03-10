@@ -28,7 +28,6 @@ class IndicatorView: UIView {
             ])
         indicatorView?.center = self.center
         indicatorView?.color = UIColor(hexString: Constant.Colors.APP_THESE_DARK_BLUE)!
-        //indicatorView?.backgroundColor = UIColor(hexString: Constant.Colors.APP_THESE_DARK_BLUE)
         self.addSubview(indicatorView!)
         indicatorView?.startAnimating()
     }

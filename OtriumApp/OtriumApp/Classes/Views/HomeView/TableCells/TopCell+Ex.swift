@@ -10,7 +10,6 @@ import SwiftHEXColors
 import SnapKit
 
 extension TopCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-//extension TopCell {
     
     func setupUIControls () {
         self.removeObjects()
@@ -25,16 +24,12 @@ extension TopCell: UICollectionViewDataSource, UICollectionViewDelegate, UIColle
         self.topCollection = {
             var colView: UICollectionView!
             let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-            //colView.setCollectionViewLayout(layout, animated: true)
-            //layout.itemSize = CGSize(width: 50, height: 100)
             layout.scrollDirection = .horizontal
-            //colView = UICollectionView(frame: .zero, collectionViewLayout: layout)
             colView = UICollectionView(frame: self.contentView.frame, collectionViewLayout: layout)
             colView.showsHorizontalScrollIndicator = false
             colView.delegate = self
             colView.dataSource = self
             colView.register(TopCollectionCell.self, forCellWithReuseIdentifier: TopCollectionCell.identifier)
-            //colView.backgroundColor = UIColor(hexString: Constant.colors.APP_GREEN_BACKGROUND)
             colView.backgroundColor = .clear
             return colView
         }()

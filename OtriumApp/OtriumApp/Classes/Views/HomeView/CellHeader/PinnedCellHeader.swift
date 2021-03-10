@@ -9,8 +9,9 @@ import UIKit
 
 class PinnedCellHeader: UIView {
     
-    var headerTitle = UILabel()
-    var moreButton = UIButton()
+    lazy var headerTitle: UILabel = UILabel.cellHeaderTitle()
+    lazy var moreButton: UIButton = UIButton.cellMoreButton()
+
     
     var moreButtonClosure:((Bool) ->())?
     
@@ -31,27 +32,11 @@ class PinnedCellHeader: UIView {
 extension PinnedCellHeader {
     private func setupUIControls () {
         self.removeUIObjects()
-        self.setupUI()
         
         self.addSubview(headerTitle)
         self.addSubview(moreButton)
         
         self.setupConstraints()
-    }
-    private func setupUI() {
-        self.headerTitle = {
-            let label = UILabel()
-            label.fontTitleColorNoBackground()
-            return label
-        }()
-        self.moreButton = {
-            let button = UIButton()
-            button.setTitle("View All", for: .normal)
-            button.setupFontAndColor()
-            button.makeRightAlignment()
-            return button
-        }()
-        
     }
     
     private func setupConstraints (){

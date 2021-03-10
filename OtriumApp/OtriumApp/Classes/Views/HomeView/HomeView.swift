@@ -24,13 +24,14 @@ class HomeView: BaseView {
     
     var userModel: UserModel?
     
-    var mainView = UIView()
-    var cellName = UILabel()
-    var cellDescription = UILabel()
-    var cellEmail = UILabel()
-    var cellImage = UIImageView()
-    var cellFollowers = UILabel()
-    var cellFollowing = UILabel()
+    lazy var mainView: UIView = UILabel.mainView()
+    lazy var cellName: UILabel = UILabel.profileName()
+    lazy var cellLogin: UILabel = UILabel.profileLogin()
+    lazy var cellEmail: UILabel = UILabel.profileEmail()
+    lazy var cellImage: UIImageView = UIImageView.profileImage()
+    lazy var cellFollowers: UILabel = UILabel.profileFollowers()
+    lazy var cellFollowing: UILabel = UILabel.profileFollowing()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,17 +51,68 @@ class HomeView: BaseView {
      ================================================== */
     private func initialLoad() {
         setupUIControls()
+        
     }
     
+    /* ==================================================
+     Used to update profile data
+     ================================================== */
     func updateProfile() {
         configureImage(userModel?.avatarUrl!, cellImage)
         cellName.text = userModel?.name
-        cellDescription.text = userModel?.login
+        cellLogin.text = userModel?.login
         cellEmail.text = userModel?.email
         cellFollowers.text = "\(userModel?.followers?.totalCount ?? 0) Followers"
         cellFollowing.text = "\(userModel?.following?.totalCount ?? 0) Following"
     }
   
+}
+
+extension HomeView {
+    /* ==================================================
+     Used to setup pinned cell header
+     ================================================== */
+    func setupPinnedHeader() -> UIView  {
+        let pinnedHeader = PinnedCellHeader()
+        pinnedHeader.initHeader()
+        pinnedHeader.headerTitle.text = "Pinned"
+        pinnedHeader.moreButton.setTitle("View All", for: .normal)
+        
+        pinnedHeader.moreButtonClosure = viewAllPinnedClicked
+        
+        return pinnedHeader
+    }
+    
+    /* ==================================================
+     Used to setup top Repository header
+     ================================================== */
+    func setupTopCellHeader() -> UIView {
+        let pinnedHeader = PinnedCellHeader()
+        pinnedHeader.initHeader()
+        pinnedHeader.headerTitle.text = "Top Repositories"
+        pinnedHeader.moreButton.setTitle("View All", for: .normal)
+        return pinnedHeader
+    }
+    
+    /* ==================================================
+     Used to setup strarred repository header
+     ================================================== */
+    func setupStarredCellHeader() -> UIView {
+        let pinnedHeader = PinnedCellHeader()
+        pinnedHeader.initHeader()
+        pinnedHeader.headerTitle.text = "Starred Repositories"
+        pinnedHeader.moreButton.setTitle("View All", for: .normal)
+        return pinnedHeader
+    }
+    
+    /* ==================================================
+     Use when ViewAll tapped in Pinned
+     ================================================== */
+    private func viewAllPinnedClicked(_ success: Bool) {
+        if success {
+            presenter.showPinnedView()
+        }
+    }
 }
 
 
@@ -106,7 +158,6 @@ extension HomeView{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(indexPath.section)
         switch indexPath.section {
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: TopCell.identifier) as! TopCell
@@ -126,9 +177,9 @@ extension HomeView{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
         case 1:
-            print("hi")
+            print("")
         case 2:
-            print("hi")
+            print("")
         default:
             presenter.selectedRow(indexPath.row)
         }
@@ -136,11 +187,11 @@ extension HomeView{
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         switch section {
         case 1:
-            return presenter.setupTopCellHeader()
+            return setupTopCellHeader()
         case 2:
-            return presenter.setupStarredCellHeader()
+            return setupStarredCellHeader()
         default:
-            return presenter.setupPinnedHeader()
+            return setupPinnedHeader()
         }
     }
     
@@ -153,6 +204,16 @@ extension HomeView{
         default:
             return presenter.headerHeight()
         }
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        
+        if maximumOffset - currentOffset <= -50.0 || currentOffset <= -50 {
+            presenter.refreshUserData()
+        }
+        
     }
     
 }

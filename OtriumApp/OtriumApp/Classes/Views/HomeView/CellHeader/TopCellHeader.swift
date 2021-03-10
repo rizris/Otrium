@@ -9,13 +9,12 @@ import UIKit
 
 class TopCellHeader: UIView {
     
-    var headerTitle = UILabel()
-    var moreButton = UIButton()
+    lazy var headerTitle: UILabel = UILabel.cellHeaderTitle()
+    lazy var moreButton: UIButton = UIButton.cellMoreButton()
     
     func initHeader ()  {
         setupUIControls()
         
-        //self.backgroundColor = UIColor(Constant.colors.IMAGE_BACKGROUND)
         self.backgroundColor = UIColor.white
     }
     
@@ -24,28 +23,13 @@ class TopCellHeader: UIView {
 extension TopCellHeader {
     private func setupUIControls () {
         self.removeUIObjects()
-        self.setupUI()
         
         self.addSubview(headerTitle)
         self.addSubview(moreButton)
         
         self.setupConstraints()
     }
-    private func setupUI() {
-        self.headerTitle = {
-            let label = UILabel()
-            label.fontTitleColorNoBackground()
-            return label
-        }()
-        self.moreButton = {
-            let button = UIButton()
-            button.setTitle("View All", for: .normal)
-            button.setupFontAndColor()
-            //button.makeContentAlignment()
-            return button
-        }()
-        
-    }
+  
     private func setupConstraints (){
         self.headerTitle.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(self.snp.top).offset(10)

@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-extension HomeView: UITableViewDataSource, UITableViewDelegate {
+extension HomeView: UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate {
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool){
         navigationController.isNavigationBarHidden = false
         navigationController.navigationBar.isTranslucent = false
@@ -21,9 +21,8 @@ extension HomeView: UITableViewDataSource, UITableViewDelegate {
         view.addSubview(profileTable)
         
         view.addSubview(mainView)
-        //mainView.addSubview(profileTitle)
         mainView.addSubview(cellName)
-        mainView.addSubview(cellDescription)
+        mainView.addSubview(cellLogin)
         mainView.addSubview(cellEmail)
         mainView.addSubview(cellImage)
         mainView.addSubview(cellFollowers)
@@ -33,58 +32,6 @@ extension HomeView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func setupUI () {
-        self.mainView = {
-            let view = UIView()
-            view.backgroundColor = .white
-            view.layer.cornerRadius = 5
-            return view
-        }()
-        self.cellImage = {
-            let imgView = UIImageView()
-            imgView.image = UIImage(named: "girl")
-            imgView.contentMode = .scaleAspectFit
-            imgView.layer.cornerRadius = 40
-            imgView.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
-            imgView.clipsToBounds = true
-            return imgView
-        }()
-        /*self.profileTitle = {
-            let label = UILabel()
-            label.text = "Profile"
-            label.fontTitleColorNoBackground()
-            label.textAlignment = .center
-            return label
-        }()*/
-        self.cellName = {
-            let label = UILabel()
-            label.text = "Raja"
-            label.fontTitleColorNoBackground()
-            return label
-        }()
-        self.cellDescription = {
-            let label = UILabel()
-            label.text = "Roja"
-            label.fontAndColorNoBackground()
-            return label
-        }()
-        self.cellEmail = {
-            let label = UILabel()
-            label.text = ""
-            label.fontAndColorNoBackground()
-            return label
-        }()
-        self.cellFollowers = {
-            let label = UILabel()
-            label.text = ""
-            label.fontAndColorNoBackground()
-            return label
-        }()
-        self.cellFollowing = {
-            let label = UILabel()
-            label.text = ""
-            label.fontAndColorNoBackground()
-            return label
-        }()
         self.profileTable = {
             let tableView = UITableView()
             tableView.backgroundColor = UIColor(hexString: Constant.Colors.PRIMARY_WHITE)
@@ -109,16 +56,9 @@ extension HomeView: UITableViewDataSource, UITableViewDelegate {
             make.left.equalTo(view.snp.left).offset(10)
             make.right.equalTo(view.snp.right).offset(-10)
         }
-        /*self.profileTitle.snp.makeConstraints{ (make) -> Void in
-            make.top.equalTo(mainView.snp.top).offset(30)
-            make.left.equalTo(mainView.snp.left).offset(10)
-            make.right.equalTo(mainView.snp.right).offset(-10)
-            make.height.equalTo(40)
-        }*/
         self.cellImage.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(mainView.snp.top).offset(10)
             make.left.equalTo(mainView.snp.left).offset(10)
-            //make.trailing.equalTo(mainView.snp.trailing).offset(-10)
             make.height.width.equalTo(80)
         }
         self.cellName.snp.makeConstraints{ (make) -> Void in
@@ -127,7 +67,7 @@ extension HomeView: UITableViewDataSource, UITableViewDelegate {
             make.right.equalTo(mainView.snp.right).offset(-10)
             make.height.equalTo(30)
         }
-        self.cellDescription.snp.makeConstraints{ (make) -> Void in
+        self.cellLogin.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(cellName.snp.bottom).offset(5)
             make.left.equalTo(cellImage.snp.right).offset(20)
             make.right.equalTo(mainView.snp.right).offset(-10)
@@ -142,7 +82,6 @@ extension HomeView: UITableViewDataSource, UITableViewDelegate {
         self.cellFollowers.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(cellEmail.snp.bottom).offset(10)
             make.left.equalTo(mainView.snp.left).offset(10)
-            //make.right.equalTo(mainView.snp.right).offset(-10)
             make.height.equalTo(cellName)
             make.width.equalTo(120)
         }
@@ -162,6 +101,7 @@ extension HomeView: UITableViewDataSource, UITableViewDelegate {
     }
     func removeObjects () {
         profileTable.removeFromSuperview()
+        mainView.removeFromSuperview()
     }
 
 }

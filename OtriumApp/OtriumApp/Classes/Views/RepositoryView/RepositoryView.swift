@@ -47,6 +47,8 @@ class RepositoryView: BaseView {
         configureImage(pinnedModel?.openGraphImageUrl, userImage)
         userName.text = pinnedModel?.name
         userDescription.text = pinnedModel?.description
+        userFork.text = "\(pinnedModel?.forkCount ?? 0)"
+        userLanguage.text = pinnedModel?.primaryLanguage?.name
     }
     private func alertMessage(_ message: String) {
         let alert = UIAlertController(title: Constant.App.APP_NAME, message: message, preferredStyle: UIAlertController.Style.alert)

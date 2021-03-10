@@ -467,8 +467,8 @@ public final class UserProfileQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =
     """
-    query UserProfile {
-      user(login: "bertrandmartel") {
+    query UserProfile($login: String!) {
+      user(login: $login) {
         __typename
         name
         login
@@ -550,7 +550,14 @@ public final class UserProfileQuery: GraphQLQuery {
 
   public let operationName: String = "UserProfile"
 
-  public init() {
+  public var login: String
+
+  public init(login: String) {
+    self.login = login
+  }
+
+  public var variables: GraphQLMap? {
+    return ["login": login]
   }
 
   public struct Data: GraphQLSelectionSet {
@@ -558,7 +565,7 @@ public final class UserProfileQuery: GraphQLQuery {
 
     public static var selections: [GraphQLSelection] {
       return [
-        GraphQLField("user", arguments: ["login": "bertrandmartel"], type: .object(User.selections)),
+        GraphQLField("user", arguments: ["login": GraphQLVariable("login")], type: .object(User.selections)),
       ]
     }
 

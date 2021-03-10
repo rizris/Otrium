@@ -12,16 +12,15 @@ class StarredCollectionCell: UICollectionViewCell {
     
     static let identifier = "starredCollectionCell"
     
-    var mainView = UIView()
-    var cellLogin = UILabel()
-    var cellName = UILabel()
-    var cellDescription = UILabel()
-    var cellImage = UIImageView()
-    var imgStar = UIImageView()
-    var imgCircle = UIImageView()
-    
-    var cellFork = UILabel()
-    var cellLanguage = UILabel()
+    lazy var mainView: UIView = UIView.cellMainView()
+    lazy var cellLogin: UILabel = UILabel.profileLogin()
+    lazy var cellName: UILabel = UILabel.profileName()
+    lazy var cellDescription: UILabel = UILabel.profileCommonLabel()
+    lazy var cellFork: UILabel = UILabel.profileCommonLabel()
+    lazy var cellLanguage: UILabel = UILabel.profileCommonLabel()
+    lazy var cellImage: UIImageView = UIImageView.cellProfileImage()
+    lazy var imgStar: UIImageView = UIImageView.starImage()
+    lazy var imgCircle: UIImageView = UIImageView.circleImage()
     
     var userModel: UserModel? {
         didSet {

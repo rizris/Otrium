@@ -13,6 +13,7 @@ struct Constant {
         static let APP_NAME                     = "OtriumApp"
         static let BASE_URL                     = "https://api.github.com/graphql"
         static let LOGO                         = "logo"
+        static let TOKEN                        = "02bb09b762252ffc2fe2120914d88ae2f0d5bdfa" // Please change it if is expired
         
     }
     
@@ -46,11 +47,8 @@ struct Constant {
         
         static let LABEL_BACK_BROWN_LIGHT       = "#F3F2F5"
         
-        static let APP_THEME_COLOR              =  "#F4F6F5"
         
-        static let APP_THEME_COLOR_BROWN        =  "#ECEBF0"
         
-        static let APP_WHITE_BACKGROUND         =  "#ffffff"
         
         static let APP_THESE_DARK_BLUE          = "#20A1D8"
         
@@ -80,6 +78,8 @@ struct Constant {
         static let APP_FONT_NAME                    = "Helvetica Neue"
         
         static let APP_FONT_NAME_BOLD               = "HelveticaNeue-Bold"
+        
+        static let CURRENT_TIME_SECOND              = "current-time"
  
     }
     
@@ -87,7 +87,9 @@ struct Constant {
         
         static let TRY_AGAIN                    = "Please try again"
         
-        static let NO_PROFILE_FOUND              = "No profile found"
+        static let NO_PROFILE_FOUND             = "No profile found"
+        
+        static let INVALID_PROFILE              = "Invalid profile detail"
         
     }
     

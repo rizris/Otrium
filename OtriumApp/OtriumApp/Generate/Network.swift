@@ -11,34 +11,45 @@
 
 import Foundation
 import Apollo
-import ApolloWebSocket
+import ApolloSQLite
 
 class Network {
     
     static let shared = Network()
-        
-    //private(set) lazy var apollo = ApolloClient(url: URL(string: "https://api.github.com/graphql")!)
-    
+            
     /* ==================================================
      Used to request network call in GraphQL
      ================================================== */
     private(set) lazy var apollo: ApolloClient = {
-        let cache = InMemoryNormalizedCache()
-        let store = ApolloStore(cache: cache)
-        let client = URLSessionClient()
-        
-        let provider = LegacyInterceptorProvider(client: client, shouldInvalidateClientOnDeinit: true, store: store)
-        
+        let token = Constant.App.TOKEN
         let url = URL(string: Constant.App.BASE_URL)!
-        //let header = ["Authorization": "Bearer 3b062f9d92bfde30acffebf801862d8ee9797946"]
-        let header = ["Authorization": "Bearer  59a2f8ab066acda50c6f3a8b2e3ea60441f748c6"]
-        let requestChainTransport = RequestChainNetworkTransport(interceptorProvider: provider, endpointURL: url, additionalHeaders: header)
-  
-        return ApolloClient(networkTransport: requestChainTransport, store: store)
+        let header = ["Authorization": "Bearer  \(token)"]
+        let requestChainTransport = RequestChainNetworkTransport(interceptorProvider: interceptionProvider(), endpointURL: url, additionalHeaders: header)
+        
+        return ApolloClient(networkTransport: requestChainTransport, store: store())
       }()
     
-    
+    /* ==================================================
+     Used to setup Apollo Store
+     ================================================== */
+    private func store() -> ApolloStore {
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let documentsURL = URL(fileURLWithPath: documentsPath)
+        let sqliteFileURL = documentsURL.appendingPathComponent("otrium_app_db.sqlite")
 
+        let sqliteCache = try! SQLiteNormalizedCache(fileURL: sqliteFileURL)
+        return ApolloStore(cache: sqliteCache)
+    }
+    
+    /* ==================================================
+     Used to setup Provider
+     ================================================== */
+    private func interceptionProvider() -> LegacyInterceptorProvider {
+        let client = URLSessionClient()
+        return LegacyInterceptorProvider(client: client, shouldInvalidateClientOnDeinit: true, store: store())
+    }
+    
+    
     
 }
 

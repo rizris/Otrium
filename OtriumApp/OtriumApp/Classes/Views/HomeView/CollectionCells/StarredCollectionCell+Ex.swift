@@ -13,7 +13,6 @@ extension StarredCollectionCell {
     
     func setupUIControls () {
         self.removeObjects()
-        self.setupUI()
         
         contentView.addSubview(mainView)
         mainView.addSubview(cellLogin)
@@ -26,69 +25,6 @@ extension StarredCollectionCell {
         mainView.addSubview(imgCircle)
         
         self.setupUIConstraints()
-    }
-    
-    private func setupUI() {
-        self.mainView = {
-            let view = UIView()
-            view.backgroundColor = .clear
-            view.layer.cornerRadius = 5
-            view.layer.borderColor = UIColor(hexString: Constant.Colors.GRAY_LIGHT)?.cgColor
-            view.layer.borderWidth = 1
-            return view
-        }()
-        self.cellImage = {
-            let imgView = UIImageView()
-            imgView.image = UIImage(named: "girl")
-            imgView.contentMode = .scaleAspectFit
-            imgView.layer.cornerRadius = 25
-            imgView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-            imgView.clipsToBounds = true
-            return imgView
-        }()
-        self.imgStar = {
-            let imgView = UIImageView()
-            imgView.image = UIImage(named: "star")
-            imgView.contentMode = .scaleAspectFit
-            return imgView
-        }()
-        self.imgCircle = {
-            let imgView = UIImageView()
-            imgView.image = UIImage(named: "circle")
-            imgView.contentMode = .scaleAspectFit
-            return imgView
-        }()
-        self.cellLogin = {
-            let label = UILabel()
-            label.text = ""
-            label.fontAndColorNoBackground()
-            return label
-        }()
-        self.cellName = {
-            let label = UILabel()
-            label.text = ""
-            label.fontTitleColorNoBackground()
-            return label
-        }()
-        self.cellDescription = {
-            let label = UILabel()
-            label.text = ""
-            label.fontAndColorNoBackground()
-            return label
-        }()
-        self.cellFork = {
-            let label = UILabel()
-            label.text = ""
-            label.fontAndColorNoBackground()
-            return label
-        }()
-        self.cellLanguage = {
-            let label = UILabel()
-            label.text = ""
-            label.fontAndColorNoBackground()
-            return label
-        }()
-      
     }
         
     private func setupUIConstraints () {
@@ -128,9 +64,9 @@ extension StarredCollectionCell {
         self.cellFork.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(cellDescription.snp.bottom).offset(20)
             make.left.equalTo(imgStar.snp.right).offset(5)
-            //make.right.equalTo(mainView.snp.right).offset(-10)
-            make.height.equalTo(30)
+            make.height.greaterThanOrEqualTo(25)
             make.width.equalTo(70)
+            make.bottom.equalTo(mainView.snp.bottom).offset(-10)
         }
         self.imgCircle.snp.makeConstraints{ (make) -> Void in
             make.centerY.equalTo(cellLanguage)
@@ -144,8 +80,6 @@ extension StarredCollectionCell {
             make.height.equalTo(cellFork)
             make.bottom.equalTo(mainView.snp.bottom).offset(-10)
         }
-       
-    
     }
     
     private func removeObjects(){
